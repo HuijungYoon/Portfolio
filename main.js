@@ -16,7 +16,6 @@ document.addEventListener("scroll", () => {
 
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (e) => {
-  console.log(e.target.dataset.link);
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
@@ -24,6 +23,13 @@ navbarMenu.addEventListener("click", (e) => {
   }
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+});
+
+//Navbar toggle btn for smooth screen
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 //Handle scrolling when tapping on the Contact me Btn
