@@ -38,3 +38,11 @@ contactMeBtn.addEventListener("click", (e) => {
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 });
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+//Make navbar transparent when it is on the top
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
