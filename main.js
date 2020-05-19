@@ -74,6 +74,13 @@ workbtnConatiner.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+  // active
+  const selected = document.querySelector(".category__btn.selected");
+  if (selected != null) {
+    selected.classList.remove("selected");
+  }
+  e.target.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
 
   setTimeout(() => {
