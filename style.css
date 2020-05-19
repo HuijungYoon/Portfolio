@@ -462,6 +462,25 @@ h3 {
   transform: scale(1.1);
   color: var(--color-yellow);
 }
+/* scrollup */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-purple);
+  border-radius: 50%;
+  color: var(--color-white);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
