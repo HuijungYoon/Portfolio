@@ -18,6 +18,7 @@ const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (e) => {
   const target = event.target;
   const link = target.dataset.link;
+  console.log(link);
   if (link == null) {
     return;
   }
